@@ -1,0 +1,20 @@
+{
+  "name": "logingik",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "pnpm build && pnpm --filter @logingik/main dev",
+    "start": "pnpm build && pnpm --filter @logingik/main start",
+    "dev:ui": "pnpm --filter @logingik/ui dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "lerna": "^6.6.2"
+  },
+  "pnpm": {
+    "approved-build-scripts": [
+      "sqlite3"
+    ]
+  }
+}
