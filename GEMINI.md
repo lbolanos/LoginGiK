@@ -23,7 +23,7 @@ files:
   - /home/lbolanos/LoginGiK/packages/ui/package.json
   - /home/lbolanos/LoginGiK/packages/main/src/index.ts
   - /home/lbolanos/LoginGiK/packages/ui/src/main.ts
-  - /home/lbolanos/LoginGiK/packages/core/src/entity/
+  - /home/lbolanos/LoginGiK/packages/core/db/src/entities/
   - /home/lbolanos/LoginGiK/packages/main/src/routes/
   - /home/lbolanos/LoginGiK/packages/ui/src/views/
 ```

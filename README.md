@@ -1,6 +1,6 @@
 # Proyecto de Gestión de Usuarios y Permisos
 
-Este es un sistema de gestión de usuarios y permisos inspirado en la arquitectura de n8n. Es un monorepo que utiliza pnpm workspaces, con un backend de TypeScript y un frontend de Vue.js.
+Este es un sistema de gestión de usuarios y permisos inspirado en la arquitectura moderna. Es un monorepo que utiliza pnpm workspaces, con un backend de TypeScript y un frontend de Vue.js.
 
 ## Estructura del Proyecto
 
