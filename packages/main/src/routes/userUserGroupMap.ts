@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { AppDataSource } from '../index';
-import { UserUserGroupMap } from '@logingik/core';
+import { UserUserGroupMap } from '@logingik/db';
 
 const router: Router = Router();
 

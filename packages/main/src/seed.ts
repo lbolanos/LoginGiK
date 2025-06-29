@@ -1,5 +1,5 @@
 import { AppDataSource } from './index';
-import { User, UserGroup, Permission, UserGroupPermission, UserUserGroupMap, Enterprise } from '@logingik/core';
+import { User, UserGroup, Permission, UserGroupPermission, UserUserGroupMap, Enterprise } from '@logingik/db';
 
 const entities = ['user', 'enterprise', 'usergroup', 'permission'];
 

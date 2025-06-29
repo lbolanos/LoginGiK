@@ -3,7 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import { DataSource } from 'typeorm';
-import { User, Enterprise, UserGroup, Permission, UserGroupPermission, UserUserGroupMap } from '@logingik/core';
+import { User, Enterprise, UserGroup, Permission, UserGroupPermission, UserUserGroupMap } from '@logingik/db';
 import { authMiddleware } from './middleware/auth';
 import { seedDatabase } from './seed';
 import authRoutes from './routes/auth';

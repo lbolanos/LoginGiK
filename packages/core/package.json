@@ -1,18 +1,17 @@
 {
   "name": "@logingik/core",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch"
   },
   "dependencies": {
+    "@logingik/db": "workspace:*",
     "@types/bcrypt": "^5.0.2",
     "bcrypt": "^6.0.0",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.1.7",
-    "typeorm": "^0.3.20"
+    "typeorm": "catalog:"
   },
   "devDependencies": {
     "@types/node": "^20.19.1",

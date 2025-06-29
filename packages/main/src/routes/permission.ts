@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { AppDataSource } from '../index';
-import { Permission } from '@logingik/core';
+import { Permission } from '@logingik/db';
 
 const router: Router = Router();
 
