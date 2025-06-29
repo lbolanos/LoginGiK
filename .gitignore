@@ -9,6 +9,9 @@
 /packages/**/build
 *.tsbuildinfo
 
+packages/**/.turbo
+.turbo
+
 # Logs
 logs
 *.log
