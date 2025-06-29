@@ -26,7 +26,7 @@ export default {
           username: this.username,
           password: this.password,
         });
-        localStorage.setItem('user', response.data.token);
+        localStorage.setItem('token', response.data.token);
         this.$router.push('/home');
       } catch (error) {
         console.error(error);
