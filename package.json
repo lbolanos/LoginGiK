@@ -2,15 +2,22 @@
   "name": "logingik",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.15",
+    "pnpm": ">=10.2.1"
+  },
+  "packageManager": "pnpm@10.2.1",
   "scripts": {
-    "build": "tsc --build",
-    "dev": "pnpm build && pnpm --filter @logingik/main dev",
-    "start": "pnpm build && pnpm --filter @logingik/main start",
-    "dev:ui": "pnpm --filter @logingik/ui dev"
+    "build": "turbo run build",
+    "build:backend": "turbo run build --filter=@logingik/main",
+    "build:frontend": "turbo run build --filter=@logingik/ui",
+    "dev": "turbo run dev",
+    "start": "turbo run start",
+    "dev:ui": "turbo run dev --filter=@logingik/ui"
   },
   "devDependencies": {
     "typescript": "^5.0.4",
-    "lerna": "^6.6.2"
+    "turbo": "^2.5.4"
   },
   "pnpm": {
     "approved-build-scripts": [
