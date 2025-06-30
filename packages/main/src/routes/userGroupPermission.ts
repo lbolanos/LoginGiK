@@ -21,3 +21,4 @@ router.get('/user-group-permissions', async (req, res) => {
 });
 
 export default router;
+export {};

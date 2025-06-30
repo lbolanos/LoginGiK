@@ -1,10 +1,7 @@
 {
   "name": "@logingik/core",
   "version": "1.0.0",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
-  },
+  "scripts": {},
   "dependencies": {
     "@logingik/db": "workspace:*",
     "@types/bcrypt": "^5.0.2",
@@ -15,6 +12,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.19.1",
+    "@vitejs/plugin-vue": "^6.0.0",
     "typescript": "^5.0.4"
   }
 }

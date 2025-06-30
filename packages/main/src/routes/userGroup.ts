@@ -20,3 +20,4 @@ router.get('/user-groups', async (req, res) => {
 });
 
 export default router;
+export {};

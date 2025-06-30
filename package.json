@@ -13,13 +13,27 @@
     "build:frontend": "turbo run build --filter=@logingik/ui",
     "dev": "turbo run dev",
     "start": "turbo run start",
-    "dev:ui": "turbo run dev --filter=@logingik/ui"
+    "dev:ui": "turbo run dev --filter=@logingik/ui",
+    "test": "turbo run test",
+    "test:backend": "turbo run test:backend --filter=@logingik/main",
+    "test:frontend": "turbo run test:frontend --filter=@logingik/ui"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
+    "@vue/test-utils": "^2.4.6",
+    "jest": "^30.0.3",
+    "jsdom": "^26.1.0",
+    "supertest": "^7.1.1",
+    "ts-jest": "^29.4.0",
+    "turbo": "^2.5.4",
     "typescript": "^5.0.4",
-    "turbo": "^2.5.4"
+    "vitest": "^3.2.4"
   },
   "pnpm": {
+    "overrides": {
+      "vite": "^5.0.0"
+    },
     "approved-build-scripts": [
       "sqlite3"
     ]

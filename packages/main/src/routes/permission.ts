@@ -20,3 +20,4 @@ router.get('/permissions', async (req, res) => {
 });
 
 export default router;
+export {};

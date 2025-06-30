@@ -1,6 +1,7 @@
 packages:
   - 'packages/*'
   - 'packages/core/db'
+  - 'packages/core/vitest-config'
 
 catalog:
   typeorm: '0.3.25'

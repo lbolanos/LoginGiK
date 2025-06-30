@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, ManyToOne } from 'typeorm';
 import * as bcrypt from 'bcrypt';
+import { Enterprise } from './Enterprise';
 
 @Entity()
 export class User {
@@ -11,6 +12,9 @@ export class User {
 
   @Column()
   password!: string;
+
+  @ManyToOne(() => Enterprise)
+  enterprise!: Enterprise;
 
   @BeforeInsert()
   async hashPassword() {

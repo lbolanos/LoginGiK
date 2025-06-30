@@ -20,3 +20,4 @@ router.get('/enterprises', async (req, res) => {
 });
 
 export default router;
+export {};

@@ -1,0 +1,9 @@
+{
+  "name": "@logingik/vitest-config",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "vitest.config.ts",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.4"
+  }
+}

@@ -21,3 +21,4 @@ router.get('/user-user-group-maps', async (req, res) => {
 });
 
 export default router;
+export {};

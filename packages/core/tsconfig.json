@@ -11,5 +11,6 @@
     "types": ["node"],
     "composite": true
   },
-  "include": ["."]
+  "include": ["."],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts", "**/tests", "vitest-config/**/*"]
 }

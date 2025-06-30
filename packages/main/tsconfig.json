@@ -6,8 +6,10 @@
     "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,
-    "types": ["node"],
-    "composite": true
+    "types": ["node", "jest"],
+    "composite": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["src"],
   "references": [
