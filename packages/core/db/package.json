@@ -5,7 +5,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rimraf node_modules dist .turbo"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

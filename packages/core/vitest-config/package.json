@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "main": "vitest.config.ts",
+  "scripts": {
+    "clean": "rimraf node_modules dist .turbo"
+  },
   "dependencies": {
     "@vitejs/plugin-vue": "^5.2.4"
   }

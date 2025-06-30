@@ -1,7 +1,9 @@
 {
   "name": "@logingik/core",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "clean": "rimraf node_modules dist .turbo"
+  },
   "dependencies": {
     "@logingik/db": "workspace:*",
     "@types/bcrypt": "^5.0.2",

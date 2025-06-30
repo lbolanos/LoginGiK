@@ -14,6 +14,7 @@
     "dev": "turbo run dev",
     "start": "turbo run start",
     "dev:ui": "turbo run dev --filter=@logingik/ui",
+    "clean": "turbo run clean --parallel",
     "test": "turbo run test",
     "test:backend": "turbo run test:backend --filter=@logingik/main",
     "test:frontend": "turbo run test:frontend --filter=@logingik/ui"
@@ -26,6 +27,7 @@
     "jsdom": "^26.1.0",
     "supertest": "^7.1.1",
     "ts-jest": "^29.4.0",
+    "rimraf": "^5.0.7",
     "turbo": "^2.5.4",
     "typescript": "^5.0.4",
     "vitest": "^3.2.4"

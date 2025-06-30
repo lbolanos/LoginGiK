@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:frontend": "vitest"
+    "test:frontend": "vitest",
+    "clean": "rimraf node_modules dist .turbo"
   },
   "dependencies": {
     "vue": "^3.2.47",
