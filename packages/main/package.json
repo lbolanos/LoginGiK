@@ -9,7 +9,9 @@
     "test": "jest",
     "test:backend": "jest --runInBand",
     "postinstall": "npm rebuild sqlite3",
-    "clean": "rimraf node_modules dist .turbo"
+    "clean": "rimraf node_modules dist .turbo",
+    "lint": "eslint . --ext .ts,.vue",
+    "lint:fix": "eslint . --ext .ts,.vue --fix"
   },
   "dependencies": {
     "@logingik/core": "workspace:*",

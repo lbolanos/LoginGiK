@@ -2,11 +2,22 @@
   <div>
     <h2>Role Management</h2>
     <form @submit.prevent="createRole">
-      <input type="text" v-model="name" placeholder="Role Name" />
-      <button type="submit">Create Role</button>
+      <input
+        v-model="name"
+        type="text"
+        placeholder="Role Name"
+      >
+      <button type="submit">
+        Create Role
+      </button>
     </form>
     <ul>
-      <li v-for="role in roles" :key="role.id">{{ role.name }}</li>
+      <li
+        v-for="role in roles"
+        :key="role.id"
+      >
+        {{ role.name }}
+      </li>
     </ul>
   </div>
 </template>
@@ -20,6 +31,9 @@ export default {
       name: '',
       roles: [],
     };
+  },
+  created() {
+    this.fetchRoles();
   },
   methods: {
     async createRole() {
@@ -41,9 +55,6 @@ export default {
         console.error(error);
       }
     },
-  },
-  created() {
-    this.fetchRoles();
   },
 };
 </script>

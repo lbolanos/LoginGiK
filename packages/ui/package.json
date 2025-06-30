@@ -8,7 +8,9 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:frontend": "vitest",
-    "clean": "rimraf node_modules dist .turbo"
+    "clean": "rimraf node_modules dist .turbo",
+    "lint": "eslint . --ext .ts,.vue",
+    "lint:fix": "eslint . --ext .ts,.vue --fix"
   },
   "dependencies": {
     "vue": "^3.2.47",

@@ -1,13 +1,11 @@
 import request from 'supertest';
 import express from 'express';
-import { AppDataSource } from '../index';
 import { User, Enterprise, UserGroup, Permission, UserGroupPermission, UserUserGroupMap } from '@logingik/db';
 import { createAuthRouter } from './auth';
-import { QueryRunner, DataSource } from 'typeorm';
+import { DataSource } from 'typeorm';
 
 describe('Auth Router', () => {
   let testDataSource: DataSource;
-  let userCounter = 0;
 
   beforeAll(async () => {
     // Create a separate test database connection
@@ -25,7 +23,6 @@ describe('Auth Router', () => {
   });
 
   beforeEach(async () => {
-    userCounter++;
     // Clear all data before each test by recreating the schema
     await testDataSource.synchronize(true);
   });
@@ -42,14 +39,14 @@ describe('Auth Router', () => {
     await testDataSource.getRepository(Enterprise).save(enterprise);
 
     const user = new User();
-    user.username = `testuser${userCounter}`;
+    user.username = 'testuser';
     user.password = 'password';
     user.enterprise = enterprise;
     await testDataSource.getRepository(User).save(user);
 
     const response = await request(app)
       .post('/api/login')
-      .send({ username: `testuser${userCounter}`, password: 'password' });
+      .send({ username: 'testuser', password: 'password' });
 
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty('token');

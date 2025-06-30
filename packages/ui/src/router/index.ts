@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Landing from '../views/Landing.vue';
-import Login from '../views/Login.vue';
-import Home from '../views/Home.vue';
+import LandingView from '../views/LandingView.vue';
+import LoginView from '../views/LoginView.vue';
+import HomeView from '../views/HomeView.vue';
 
 const routes = [
-  { path: '/', name: 'Landing', component: Landing },
-  { path: '/login', name: 'Login', component: Login },
-  { path: '/home', name: 'Home', component: Home, meta: { requiresAuth: true } },
+  { path: '/', name: 'Landing', component: LandingView },
+  { path: '/login', name: 'Login', component: LoginView },
+  { path: '/home', name: 'Home', component: HomeView, meta: { requiresAuth: true } },
 ];
 
 const router = createRouter({

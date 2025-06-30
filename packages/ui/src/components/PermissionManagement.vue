@@ -2,11 +2,22 @@
   <div>
     <h2>Permission Management</h2>
     <form @submit.prevent="createPermission">
-      <input type="text" v-model="name" placeholder="Permission Name" />
-      <button type="submit">Create Permission</button>
+      <input
+        v-model="name"
+        type="text"
+        placeholder="Permission Name"
+      >
+      <button type="submit">
+        Create Permission
+      </button>
     </form>
     <ul>
-      <li v-for="permission in permissions" :key="permission.id">{{ permission.name }}</li>
+      <li
+        v-for="permission in permissions"
+        :key="permission.id"
+      >
+        {{ permission.name }}
+      </li>
     </ul>
   </div>
 </template>
@@ -20,6 +31,9 @@ export default {
       name: '',
       permissions: [],
     };
+  },
+  created() {
+    this.fetchPermissions();
   },
   methods: {
     async createPermission() {
@@ -41,9 +55,6 @@ export default {
         console.error(error);
       }
     },
-  },
-  created() {
-    this.fetchPermissions();
   },
 };
 </script>

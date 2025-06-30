@@ -2,11 +2,22 @@
   <div>
     <h2>Enterprise Management</h2>
     <form @submit.prevent="createEnterprise">
-      <input type="text" v-model="name" placeholder="Enterprise Name" />
-      <button type="submit">Create Enterprise</button>
+      <input
+        v-model="name"
+        type="text"
+        placeholder="Enterprise Name"
+      >
+      <button type="submit">
+        Create Enterprise
+      </button>
     </form>
     <ul>
-      <li v-for="enterprise in enterprises" :key="enterprise.id">{{ enterprise.name }}</li>
+      <li
+        v-for="enterprise in enterprises"
+        :key="enterprise.id"
+      >
+        {{ enterprise.name }}
+      </li>
     </ul>
   </div>
 </template>
@@ -20,6 +31,9 @@ export default {
       name: '',
       enterprises: [],
     };
+  },
+  created() {
+    this.fetchEnterprises();
   },
   methods: {
     async createEnterprise() {
@@ -41,9 +55,6 @@ export default {
         console.error(error);
       }
     },
-  },
-  created() {
-    this.fetchEnterprises();
   },
 };
 </script>

@@ -2,12 +2,27 @@
   <div>
     <h2>User Management</h2>
     <form @submit.prevent="createUser">
-      <input type="text" v-model="username" placeholder="Username" />
-      <input type="password" v-model="password" placeholder="Password" />
-      <button type="submit">Create User</button>
+      <input
+        v-model="username"
+        type="text"
+        placeholder="Username"
+      >
+      <input
+        v-model="password"
+        type="password"
+        placeholder="Password"
+      >
+      <button type="submit">
+        Create User
+      </button>
     </form>
     <ul>
-      <li v-for="user in users" :key="user.id">{{ user.username }}</li>
+      <li
+        v-for="user in users"
+        :key="user.id"
+      >
+        {{ user.username }}
+      </li>
     </ul>
   </div>
 </template>
@@ -22,6 +37,9 @@ export default {
       password: '',
       users: [],
     };
+  },
+  created() {
+    this.fetchUsers();
   },
   methods: {
     async createUser() {
@@ -45,9 +63,6 @@ export default {
         console.error(error);
       }
     },
-  },
-  created() {
-    this.fetchUsers();
   },
 };
 </script>

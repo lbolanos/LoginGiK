@@ -1,11 +1,18 @@
 <template>
   <div>
     <h1>Welcome to the Admin Panel</h1>
-    <button @click="logout">Logout</button>
+    <button @click="logout">
+      Logout
+    </button>
     <div>
       <h2>Enterprises</h2>
       <ul>
-        <li v-for="enterprise in enterprises" :key="enterprise.id">{{ enterprise.name }}</li>
+        <li
+          v-for="enterprise in enterprises"
+          :key="enterprise.id"
+        >
+          {{ enterprise.name }}
+        </li>
       </ul>
     </div>
     <div>

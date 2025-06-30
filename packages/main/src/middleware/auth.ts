@@ -12,7 +12,7 @@ export const authMiddleware = (req: Request, res: Response, next: NextFunction) 
       if (err) {
         return res.sendStatus(403);
       }
-      // @ts-ignore
+      // @ts-expect-error: Unreachable code error
       req.user = user;
       next();
     });
